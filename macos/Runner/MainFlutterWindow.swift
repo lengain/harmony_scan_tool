@@ -4,7 +4,7 @@ import app_selector
 
 class MainFlutterWindow: NSWindow, NSDraggingDestination {
     override func awakeFromNib() {
-        let flutterViewController = FlutterViewController()
+        let flutterViewController = MNFlutterMainViewController()
         flutterViewController.backgroundColor = NSColor.white
         let windowFrame = self.frame
         self.contentViewController = flutterViewController

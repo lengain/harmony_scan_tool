@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
         Locale('en', 'US'), // 美国英语
         Locale('zh', 'CN'), // 中文简体
       ],
+      debugShowCheckedModeBanner: false,
       home: const MNRootPage(),
     );
   }

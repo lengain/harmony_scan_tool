@@ -31,6 +31,10 @@ abstract class AppSelectorPlatform extends PlatformInterface {
     throw UnimplementedError('selectFilePath() has not been implemented.');
   }
 
+  Future<String?> javaVersion() {
+    throw UnimplementedError('selectFilePath() has not been implemented.');
+  }
+
   Future<void> setRootPageType(int type) {
     throw UnimplementedError('setRootPageType() has not been implemented.');
   }

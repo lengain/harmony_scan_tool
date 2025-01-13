@@ -35,6 +35,13 @@ class MNPluginManager: NSObject, AppSelectorDelegate {
             print(call)
         case "selectFilePath":
             selectAppFile(result: result)
+        case "javaVersion" :
+            let commandResult = MNCommand.runCommandWithAppleScript(command: "java --version")
+            if commandResult.stdout.isEmpty {
+                result(commandResult.stderr)
+            }else {
+                result(commandResult.stdout)
+            }
         default:
             result(FlutterMethodNotImplemented)
         }

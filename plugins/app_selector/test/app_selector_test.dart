@@ -17,6 +17,13 @@ class MockAppSelectorPlatform
   }
 
   @override
+  Future<String?> javaVersion() {
+    // TODO: implement selectFilePath
+    throw UnimplementedError();
+  }
+
+
+  @override
   Future<void> setRootPageType(int type) {
     // TODO: implement setRootFileType
     throw UnimplementedError();

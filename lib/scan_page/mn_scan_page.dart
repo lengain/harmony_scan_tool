@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:loader_overlay/loader_overlay.dart';
@@ -36,8 +38,10 @@ class _MNScanPageState extends State<MNScanPage> {
     macEnvironmentCheck();
   }
 
+
+
   macEnvironmentCheck() {
-    MNCommandLine.openJdkVersion((String version) {
+    MNCommandLine.openJdkVersionFromPlugin((String version) {
       setState(() {
         _openJdkVersion = version;
       });

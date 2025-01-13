@@ -23,6 +23,12 @@ class MethodChannelAppSelector extends AppSelectorPlatform {
   }
 
   @override
+  Future<String?> javaVersion() async {
+    final version = await methodChannel.invokeMethod<String>('javaVersion');
+    return version;
+  }
+
+  @override
   Future<void> setRootPageType(int type) async {
     return await methodChannel.invokeMethod<void>('setRootPageType', [type]);
   }

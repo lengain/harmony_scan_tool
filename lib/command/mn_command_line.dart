@@ -8,6 +8,7 @@ import '../root/mn_page_controller.dart';
 import '../tab/model/ln_suffix_model.dart';
 import '../util/file_util.dart';
 import '../util/mn_string_util.dart';
+import '../util/mn_native_manager.dart';
 
 class MNCommandLine {
   static Future<bool> runCommand(String command, List<String> arguments) async {
@@ -122,6 +123,26 @@ class MNCommandLine {
       callBack(false);
       print(
           'Command failed with exit code ${process.exitCode}: ${process.stderr}');
+    }
+  }
+
+  static openJdkVersionFromPlugin(void Function(String version) callBack) async {
+    final javaVersion = await MNNativeManager.share().bridge.javaVersion() ??
+        'Unknown java version';
+
+    if (kDebugMode) {
+      print('Command executed successfully: $stdout');
+    }
+    // 正则表达式匹配 OpenJDK 版本号（假设版本号的格式为 x.y.z）
+    RegExp versionRegex =
+    RegExp(r'(?:\bopenjdk\b|\bjava\b)\s+(\d+\.\d+\.\d+)');
+    RegExpMatch? match = versionRegex.firstMatch(javaVersion);
+    if (match != null && match.groupCount >= 1) {
+      String openjdkVersion = match.group(1)!;
+      callBack('OpenJDK: $openjdkVersion');
+      print('OpenJDK Version: $openjdkVersion');
+    } else {
+      callBack('No Java version found. Please Install Java JDK');
     }
   }
 

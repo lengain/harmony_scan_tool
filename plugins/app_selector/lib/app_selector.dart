@@ -9,6 +9,10 @@ class AppSelector {
     return AppSelectorPlatform.instance.selectFilePath();
   }
 
+  Future<String?> javaVersion() {
+    return AppSelectorPlatform.instance.javaVersion();
+  }
+
   Future<void> setRootPageType(int type) {
     return AppSelectorPlatform.instance.setRootPageType(type);
   }
