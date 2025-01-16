@@ -6,7 +6,7 @@
 
 魔数鸿蒙扫描是一款专为鸿蒙应用开发设计的辅助工具，旨在帮助开发者优化应用安装包结构、提升用户体验。通过深入的分析检测功能，该工具能够扫描指定路径的App包内容，并生成详细的检测结果报告。这些报告为开发者提供了宝贵的数据支撑，助力他们排查问题、优化包结构，从而打造出更加高效、稳定的应用。
 
-<img title="" src="https://raw.githubusercontent.com/lengain/harmony_scan_tool/refs/heads/main/snapshot/1736427937339.jpg" alt="图片" data-align="center" width="419">
+<img title="" src="./snapshot/1736427937339.jpg" alt="图片" data-align="center" width="419">
 
 核心功能
 
@@ -14,7 +14,7 @@
    
    • 智能识别并列出安装包中的所有重复文件，帮助开发者减小安装包体积。
    
-   <img title="" src="https://raw.githubusercontent.com/lengain/harmony_scan_tool/refs/heads/main/snapshot/1736427986886.jpg" alt="图片" width="527">
+   <img title="" src="./snapshot/1736427986886.jpg" alt="图片" width="527">
 
 2. 统计分析文件：
    
@@ -22,7 +22,7 @@
    
    • 提供直观的数据展示，帮助开发者了解包内文件的分布情况。
    
-   <img src="https://raw.githubusercontent.com/lengain/harmony_scan_tool/refs/heads/main/snapshot/1736427969411.jpg" title="" alt="图片" width="552">
+   <img src="./snapshot/1736427969411.jpg" title="" alt="图片" width="552">
 
 操作便捷性
 
